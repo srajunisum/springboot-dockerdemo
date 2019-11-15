@@ -16,4 +16,7 @@ node {
         }
     }
 
+    stage('Build Image') {
+            docker.build("samedaydelivery-1.jar" }
+
    }

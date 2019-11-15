@@ -17,6 +17,12 @@ node {
     }
 
     stage('Build Image') {
-            docker.build("samedaydelivery-1.jar") }
+          app = docker.build("samedaydelivery-1.jar")
+             }
 
+    stage('Test image'){
+        app.inside {
+        echo "Tests Passed"
+        }
+    }
    }

@@ -7,8 +7,9 @@ ARG JAR_FILE=build/libs/samedaydelivery-1.jar
 
 ADD ${JAR_FILE} samedaydelivery-1.jar
 
-
 # Run the jar file
 ENTRYPOINT ["java","-jar","/samedaydelivery-1.jar"]
+
+#buid trigger auto
 
 

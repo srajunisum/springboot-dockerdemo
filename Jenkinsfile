@@ -22,7 +22,7 @@ node {
              }
 
     stage ('publish Docker Image'){
-    withCredentials([string(credentialsId:'dockerHubPwd', variable:'dockerHubPwd')]) {
+    withCredentials([string(credentialsId:'docker-pwd', variable:'dockerHubPwd')]) {
       sh "docker login -u ajayk333 -p ${dockerHubPwd}"
     }
     sh 'docker push ajayk333/samedaydelivery-1.jar'

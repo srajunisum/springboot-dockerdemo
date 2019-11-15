@@ -8,8 +8,12 @@ node {
 
    }
 
-   stage('Build Image') {
-           docker.build("samedaydelivery-1.jar")
-           }
+    stage('Gradle Build') {
+        if (isUnix()) {
+            sh './gradlew clean build'
+        } else {
+            bat 'gradlew.bat clean build'
+        }
+    }
 
    }

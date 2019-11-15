@@ -16,7 +16,7 @@ public class SamedaydeliveryApplication {
     @GetMapping
     public String print(){
 
-	    return "Hello World";
+	    return "Hello World Application";
     }
 
 }

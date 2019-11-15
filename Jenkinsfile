@@ -11,13 +11,7 @@ pipeline {
         git 'https://github.com/srajunisum/springboot-dockerdemo.git'
       }
     }
-    stage('Gradle Build') {
-            if (isUnix()) {
-                sh './gradlew clean build'
-            } else {
-                bat 'gradlew.bat clean build'
-            }
-        }
+
     stage('Building image') {
       steps{
         script {

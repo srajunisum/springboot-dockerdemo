@@ -18,11 +18,11 @@ node {
 
     stage('Build Image') {
 
-     docker.build("ajayk333/samedaydelivery-1.jar")
+     docker.build("ajayk333/samedaydelivery.jar")
              }
 
     stage ('publish Docker Image'){
-    withCredetials([string(credentialsId:'dockerHubPwd', variable:'dockerHubPwd')]) {
+    withCredentials([string(credentialsId:'dockerHubPwd', variable:'dockerHubPwd')]) {
       sh "docker login -u ajayk333 -p ${dockerHubPwd}"
     }
     sh 'docker push ajayk333/samedaydelivery-1.jar'

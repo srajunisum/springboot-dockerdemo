@@ -16,7 +16,7 @@ public class SamedaydeliveryApplication {
     @GetMapping
     public String print(){
 
-	    return "Hello World Application";
+	    return "Hello World Application Trigger Test";
     }
 
 }

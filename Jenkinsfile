@@ -7,4 +7,9 @@ node {
         git 'https://github.com/srajunisum/springboot-dockerdemo.git'
 
    }
+
+   stage('Build Image') {
+           docker.build("samedaydelivery-1")
+           }
+
    }

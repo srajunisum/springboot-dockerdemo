@@ -15,6 +15,7 @@ pipeline {
                 poll: true
             ])
       }
+
     }
 
     stage('Building image') {

@@ -11,8 +11,8 @@ pipeline {
       steps {
 
         git([
-                url: "https://github.com/${project}/${repoName}.git",
-                poll: false
+                url: "https://github.com/srajunisum/springboot-dockerdemo.git",
+                poll: true
             ])
       }
     }

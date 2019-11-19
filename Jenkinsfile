@@ -14,6 +14,7 @@ pipeline {
                 url: "https://github.com/srajunisum/springboot-dockerdemo.git",
                 poll: true
             ])
+
       }
     }
 

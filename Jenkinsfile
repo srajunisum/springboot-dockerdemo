@@ -6,9 +6,7 @@ pipeline {
   }
   agent any
 
-  triggers {
-          cron('H */4 * * 1-5')
-      }
+  triggers{ cron('H(0-29)/10 * * * *') }
 
   stages {
     stage('Cloning Git') {

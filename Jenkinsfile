@@ -31,7 +31,7 @@ pipeline {
         }
       }
     }
-    stage('Deploy Image') {
+    stage('push Image') {
       steps{
         script {
           docker.withRegistry( '', registryCredential ) {
@@ -39,6 +39,14 @@ pipeline {
           }
         }
       }
+    }
+
+    stage('deploy App') {
+     steps{
+        script {
+            kubernetesDeploye(configs:"bootdemo.yaml",kubeconfigId:"mycubeconfig")
+        }
+     }
     }
 
   }

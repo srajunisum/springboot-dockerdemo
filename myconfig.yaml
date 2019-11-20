@@ -1,24 +1,24 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: boot-app
+  name: SDD
   namespace: default
 spec:
   replicas: 1
   selector:
     matchLabels:
-      run: boot-app
+      run: SDD
   template:
     metadata:
       labels:
-        run: boot-app
+        run: SDD
     spec:
       containers:
-      - name: boot-app
-        image: https://hub.docker.com/r/ajayk333/samedaydelivery-1.jar
+      - name: SDD
+        image: https://hub.docker.com/r/ajayk333/sdd
         resources:
           limits:
-            memory: "1000Mi"
+            memory: "5000Mi"
             cpu: "500m"
         ports:
           - containerPort: 8081
@@ -31,7 +31,7 @@ metadata:
 spec:
   type: NodePort
   selector:
-    run: boot-app
+    run: SDD
   ports:
   - port: 8081
     targetPort: 8081

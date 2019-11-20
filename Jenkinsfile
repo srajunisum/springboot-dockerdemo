@@ -27,7 +27,7 @@ pipeline {
     stage('Building image') {
       steps{
         script {
-          dockerImage =  docker.build("ajayk333/sdd") +":$BUILD_NUMBER"
+          dockerImage =  docker.build("ajayk333/sdd")
         }
       }
     }

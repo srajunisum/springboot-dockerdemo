@@ -16,6 +16,7 @@ spec:
       containers:
       - name: SDD
         image: https://hub.docker.com/r/ajayk333/sdd
+        imagePullPolicy: Always
         resources:
           limits:
             memory: "5000Mi"

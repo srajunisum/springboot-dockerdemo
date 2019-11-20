@@ -27,7 +27,7 @@ pipeline {
     stage('Building image') {
       steps{
         script {
-          dockerImage =  docker.build("ajayk333/sdd")
+          dockerImage =  docker.build("ajayk333/sdd") +":$BUILD_NUMBER"
         }
       }
     }
@@ -44,7 +44,7 @@ pipeline {
     stage('deploy App') {
      steps{
         script {
-            kubernetesDeploy(configs:"bootdemo.yaml",kubeconfigId:"mycubeconfig")
+            kubernetesDeploy(configs:"myconfig.yaml",kubeconfigId:"mycubeconfig")
 
         }
      }

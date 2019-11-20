@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: SDD
+  name: samedaydelivery
   namespace: default
 spec:
   replicas: 1
   selector:
     matchLabels:
-      run: SDD
+      run: samedaydelivery
   template:
     metadata:
       labels:
-        run: SDD
+        run: samedaydelivery
     spec:
       containers:
-      - name: SDD
+      - name: samedaydelivery
         image: https://hub.docker.com/r/ajayk333/sdd
         imagePullPolicy: Always
         resources:
@@ -32,7 +32,7 @@ metadata:
 spec:
   type: NodePort
   selector:
-    run: SDD
+    run: samedaydelivery
   ports:
   - port: 8081
     targetPort: 8081

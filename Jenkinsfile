@@ -16,6 +16,14 @@ pipeline {
             ])
      }
     }
+
+    stage('Gradle Build') {
+      steps{
+      script{
+             bat 'gradlew.bat clean build'
+         }
+        }
+    }
     stage('Building image') {
       steps{
         script {

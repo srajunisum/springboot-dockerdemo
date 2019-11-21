@@ -16,7 +16,6 @@ spec:
       containers:
       - name: samedaydelivery
         image: https://hub.docker.com/r/ajayk333/sdd
-        imagePullPolicy: Always
         resources:
           limits:
             memory: "1000Mi"

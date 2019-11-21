@@ -18,7 +18,7 @@ spec:
         image: https://hub.docker.com/r/ajayk333/sdd
         resources:
           limits:
-            memory: "5000Mi"
+            memory: "500Mi"
         ports:
           - containerPort: 8081
 ---

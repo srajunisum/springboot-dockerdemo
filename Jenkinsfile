@@ -1,6 +1,6 @@
 pipeline {
   environment {
-    registry = "gustavoapolinario/docker-test"
+    registry = "ajayk333/sdd"
     registryCredential = 'dockerhub'
     dockerImage = ''
   }
@@ -27,7 +27,7 @@ pipeline {
     stage('Building image') {
       steps{
         script {
-          dockerImage =  docker.build("ajayk333/sdd")
+          dockerImage =  docker.build registry
         }
       }
     }

@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: samedaydelivery
-        image: https://hub.docker.com/r/ajayk333/sdd
+        image: https://hub.docker.com/r/ajayk333/sdd:3
         imagePullPolicy: Always
         resources:
           limits:

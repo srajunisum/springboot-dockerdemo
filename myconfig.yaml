@@ -17,6 +17,8 @@ spec:
       - name: samedaydelivery
         image: https://hub.docker.com/r/ajayk333/sdd
         resources:
+          requests:
+            memory: "250Mi"
           limits:
             memory: "500Mi"
         ports:

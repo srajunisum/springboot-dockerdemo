@@ -4,7 +4,7 @@ pipeline {
     registryCredential = 'dockerhub'
     dockerImage = ''
   }
-  agent { dockerfile true }
+  agent any
 
   stages {
     stage('Cloning Git') {

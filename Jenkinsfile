@@ -9,11 +9,7 @@ pipeline {
   stages {
     stage('Cloning Git') {
       steps {
-
-        git([
-                url: "https://github.com/srajunisum/springboot-dockerdemo.git",
-                poll: true
-            ])
+       git 'https://github.com/srajunisum/springboot-dockerdemo.git'
      }
     }
 

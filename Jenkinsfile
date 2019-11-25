@@ -18,10 +18,10 @@ pipeline {
     }
 
     stage('Gradle Build') {
-      steps{
-      script{
-             sh './gradlew.bat clean build'
-         }
+        if (isUnix()) {
+            sh './gradlew clean build'
+        } else {
+            bat 'gradlew.bat clean build'
         }
     }
     stage('Building image') {

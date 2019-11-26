@@ -1,6 +1,6 @@
 pipeline {
   environment {
-    registry = "ajayk333/sdd"
+    registry = "ajayk333/samedaydelivery-1.jar"
     registryCredential = 'dockerhub'
     dockerImage = ''
   }

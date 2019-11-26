@@ -1,5 +1,5 @@
 # Start with a base image containing Java runtime
-FROM jenkins/jenkins:2.154-alpine
+FROM openjdk:8-jdk-alpine
 
 ARG JAR_FILE=build/libs/samedaydelivery-1.jar
 
